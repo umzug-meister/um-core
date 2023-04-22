@@ -1,8 +1,12 @@
 {
   "name": "um-types",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "um-types",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mee3003/um-types.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
