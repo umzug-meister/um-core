@@ -52,9 +52,9 @@ export interface MLeistung {
 }
 
 export interface TimeBasedPrice {
-  hours: string;
-  basis: string;
-  extra: string;
+  hours: string | number;
+  basis: string | number;
+  extra: string | number;
 }
 
 export interface Prices {
