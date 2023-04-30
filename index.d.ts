@@ -43,7 +43,7 @@ export interface Order {
 export interface MLeistung {
   desc: string;
   price?: string;
-  sum: string;
+  sum: string | number;
   colli?: number;
   calculate: boolean;
   hidden?: boolean;
