@@ -100,7 +100,7 @@ export interface Customer {
 
 export interface Furniture {
   categoryRefs: Category[];
-  categories: string[];
+  selectedCategory?: string;
   name: string;
   id: string;
   colli: string | number;
