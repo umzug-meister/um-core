@@ -100,6 +100,7 @@ export interface Customer {
 
 export interface Furniture {
   categoryRefs: Category[];
+  categories: string[];
   name: string;
   id: string;
   colli: string | number;
@@ -117,7 +118,7 @@ export interface Furniture {
   step?: number;
 }
 
-type OrderService = AppPacking | AppService;
+export type OrderService = AppPacking | AppService;
 
 export type AppServiceTag = "Bohrarbeiten" | "Price" | "Packmaterial";
 
