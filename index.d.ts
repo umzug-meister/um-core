@@ -29,11 +29,11 @@ export interface Order {
   expensiveText: string;
   images: string[];
   prices: Prices;
-  discount: string;
-  discountValue: string;
-  rideCosts: string;
-  volume: string;
-  sum: string;
+  discount: string | number;
+  discountValue: string | number;
+  rideCosts: string | number;
+  volume: string | number;
+  sum: string | number;
   timeBased: TimeBasedPrice;
   ownItems: string;
   rechnung?: Rechnung;
