@@ -131,6 +131,7 @@ export type AppPrice = {
   workers: number;
   includedHours: number;
   sum: number;
+  ridingCosts: number;
 };
 
 export type AppPacking = {
