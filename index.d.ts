@@ -1,5 +1,5 @@
 export interface Order {
-  src?: "express" | "ruckzuck";
+  src?: "express" | "individuelle";
   id: string | undefined;
   rid?: string;
   status: string;
