@@ -22,7 +22,7 @@ export interface Order {
   disposalFlag: boolean;
   disposalText: string;
   creationTime: string;
-  lupd: string;
+  lupd: number;
   extraCbm: string;
   time: string;
   expensive: boolean;
