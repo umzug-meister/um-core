@@ -1,5 +1,7 @@
 export interface Order {
   src?: "express" | "individuelle";
+  check24?: boolean;
+  myhammer?: boolean;
   id: string | undefined;
   rid?: string;
   status: string;
