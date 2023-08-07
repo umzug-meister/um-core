@@ -140,16 +140,16 @@ export type AppPacking = {
   tag: "Packmaterial";
   id: string;
   name: string;
-  price: string | number;
-  colli: string | number;
+  price: string;
+  colli: string;
 };
 
 export type AppService = {
   tag: "Bohrarbeiten";
   id: string;
   name: string;
-  price: string | number;
-  colli: string | number;
+  price: string;
+  colli: string;
 };
 
 export type Service = AppPacking | AppService | AppPrice;
