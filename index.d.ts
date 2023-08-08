@@ -183,6 +183,7 @@ export interface DueDate {
   date: string;
   index: number;
   costs?: number;
+  sum: number;
 }
 
 export interface Rechnung {
