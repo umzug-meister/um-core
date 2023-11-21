@@ -40,6 +40,7 @@ export interface Order {
   ownItems: string;
   rechnung?: Rechnung;
   gutschrift?: Gutschrift;
+  costsAssumption: boolean;
 }
 
 export interface MLeistung {
