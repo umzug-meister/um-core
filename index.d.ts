@@ -154,6 +154,7 @@ export type AppPacking = {
   colli: string;
   desc: string;
   media: string;
+  show: true;
 };
 
 export type AppService = {
@@ -162,6 +163,7 @@ export type AppService = {
   name: string;
   price: string;
   colli: string;
+  show: true;
 };
 
 export type Service = AppPacking | AppService | AppPrice;
