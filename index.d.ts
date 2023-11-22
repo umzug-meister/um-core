@@ -44,6 +44,7 @@ export interface Order {
   rechnung?: Rechnung;
   gutschrift?: Gutschrift;
   costsAssumption: boolean;
+  needPackings: boolean;
 }
 
 export interface MLeistung {
