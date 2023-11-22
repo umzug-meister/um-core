@@ -152,6 +152,8 @@ export type AppPacking = {
   name: string;
   price: string;
   colli: string;
+  desc: string;
+  media: string;
 };
 
 export type AppService = {
