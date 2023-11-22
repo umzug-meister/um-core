@@ -25,10 +25,13 @@ export interface Order {
   disposalText: string;
   creationTime: string;
   lupd: number;
-  extraCbm: string;
   time: string;
   expensive: boolean;
   expensiveText: string;
+  bulky: boolean;
+  bulkyText: string;
+  heavy: boolean;
+  heavyText: string;
   images: string[];
   prices: Prices;
   discount: string | number;
@@ -79,7 +82,6 @@ export interface Address {
   roomsNumber: string;
   parkingSlot: boolean;
   area: string;
-  personsNumber?: string;
   liftType: string;
   runningDistance: string;
   address: string;
@@ -89,6 +91,13 @@ export interface Address {
   demontage?: boolean;
   montage?: boolean;
   stockwerke?: string[];
+  roomsToRelocate: number;
+  hasBasement: boolean;
+  hasGarage: boolean;
+  kitchenWidth: number;
+  wardrobeWidth: number;
+  bedNumber: number;
+  bulky: boolean;
 }
 
 export interface Customer {
