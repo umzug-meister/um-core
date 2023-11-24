@@ -45,6 +45,7 @@ export interface Order {
   gutschrift?: Gutschrift;
   costsAssumption: boolean;
   needPackings: boolean;
+  bohrarbeiten: boolean;
 }
 
 export interface MLeistung {
