@@ -146,6 +146,7 @@ export type AppPrice = {
   includedHours: number;
   sum: number;
   ridingCosts: number;
+  sort: number;
 };
 
 export type AppPacking = {
@@ -157,6 +158,7 @@ export type AppPacking = {
   desc: string;
   media: string;
   show: true;
+  sort: number;
 };
 
 export type AppService = {
