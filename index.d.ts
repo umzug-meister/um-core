@@ -1,4 +1,5 @@
 export interface Order {
+  dataPrivacyAccepted: boolean;
   src?: "express" | "individuelle";
   check24?: boolean;
   myhammer?: boolean;
