@@ -33,7 +33,8 @@ export interface Order {
   bulkyItems: CustomItem[];
   heavy: boolean;
   heavyItems: CustomItem[];
-  images: string[] | SendData[];
+  images: string[];
+  sendData: SendData[];
   prices: Prices;
   discount: string | number;
   discountValue: string | number;
