@@ -28,12 +28,12 @@ export interface Order {
   lupd: number;
   time: string;
   expensive: boolean;
-  expensiveText: string;
+  expensiveItems: CustomItem[];
   bulky: boolean;
-  bulkyText: string;
+  bulkyItems: CustomItem[];
   heavy: boolean;
-  heavyText: string;
-  images: string[];
+  heavyItems: CustomItem[];
+  images: string[] | SendData[];
   prices: Prices;
   discount: string | number;
   discountValue: string | number;
@@ -47,6 +47,35 @@ export interface Order {
   costsAssumption: boolean;
   needPackings: boolean;
   bohrarbeiten: boolean;
+}
+
+export interface SendData {
+  /**
+   * URL of the uploaded object.
+   */
+  Location: string;
+  /**
+   * ETag of the uploaded object.
+   */
+  ETag: string;
+  /**
+   * Bucket to which the object was uploaded.
+   */
+  Bucket: string;
+  /**
+   * Key to which the object was uploaded.
+   */
+  Key: string;
+}
+
+export interface CustomItem {
+  name: string;
+  weight: number;
+  breite: number;
+  tiefe: number;
+  hoehe: number;
+  colli: number;
+  itemVolume: number;
 }
 
 export interface MLeistung {
