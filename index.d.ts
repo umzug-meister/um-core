@@ -28,6 +28,10 @@ export interface Order {
   lupd: number;
   time: string;
   expensive: boolean;
+  /**
+   * @deprecated
+   */
+  expensiveText: string;
   expensiveItems: CustomItem[];
   bulky: boolean;
   bulkyItems: CustomItem[];
