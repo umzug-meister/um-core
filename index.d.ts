@@ -207,6 +207,7 @@ export interface Category {
   id: string;
   name: string;
   slug: string;
+  sort: number;
 }
 
 export interface ItemBlock {
