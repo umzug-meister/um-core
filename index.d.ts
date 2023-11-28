@@ -21,6 +21,7 @@ export interface Order {
   transporterNumber: number;
   t75: number;
   boxNumber: number;
+  kleiderboxNumber: number;
   text: string;
   disposalFlag: boolean;
   disposalText: string;
