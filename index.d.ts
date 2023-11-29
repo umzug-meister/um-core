@@ -39,7 +39,7 @@ export interface Order {
   heavy: boolean;
   heavyItems: CustomItem[];
   images: string[];
-  sendData: SendData[];
+  bucketImages: BucketObject[];
   prices: Prices;
   discount: string | number;
   discountValue: string | number;
@@ -55,15 +55,11 @@ export interface Order {
   bohrarbeiten: boolean;
 }
 
-export interface SendData {
+export interface BucketObject {
   /**
    * URL of the uploaded object.
    */
   Location: string;
-  /**
-   * ETag of the uploaded object.
-   */
-  ETag: string;
   /**
    * Bucket to which the object was uploaded.
    */
