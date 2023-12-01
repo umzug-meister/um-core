@@ -1,6 +1,8 @@
-export interface Order {
+export type OrderSrcType = "express" | "individuelle" | "UmzugRuckZuck";
+
+export type Order = {
   dataPrivacyAccepted: boolean;
-  src?: "express" | "individuelle";
+  src?: OrderSrcType;
   check24?: boolean;
   myhammer?: boolean;
   id: string | undefined;
@@ -53,9 +55,9 @@ export interface Order {
   costsAssumption: boolean;
   needPackings: boolean;
   bohrarbeiten: boolean;
-}
+};
 
-export interface BucketObject {
+export type BucketObject = {
   /**
    * URL of the uploaded object.
    */
@@ -68,9 +70,9 @@ export interface BucketObject {
    * Key to which the object was uploaded.
    */
   Key: string;
-}
+};
 
-export interface CustomItem {
+export type CustomItem = {
   name: string;
   weight: number;
   breite: number;
@@ -78,9 +80,9 @@ export interface CustomItem {
   hoehe: number;
   colli: number;
   itemVolume: number;
-}
+};
 
-export interface MLeistung {
+export type MLeistung = {
   desc: string;
   price?: string;
   sum: string | number;
@@ -89,28 +91,28 @@ export interface MLeistung {
   hidden?: boolean;
   red?: boolean;
   disabled?: boolean;
-}
+};
 
-export interface TimeBasedPrice {
+export type TimeBasedPrice = {
   hours: string | number;
   basis: string | number;
   extra: string | number;
-}
+};
 
-export interface Prices {
+export type Prices = {
   halteverbotszonen?: number;
   services?: number;
   verpackung?: number;
   other?: number;
-}
+};
 
-export interface MovementDates {
+export type MovementDates = {
   date: string;
   date_from: string;
   date_to: string;
-}
+};
 
-export interface Address {
+export type Address = {
   floor: string;
   isAltbau: boolean;
   roomsNumber: string;
@@ -132,9 +134,9 @@ export interface Address {
   wardrobeWidth: number;
   bedNumber: number;
   bulky: boolean;
-}
+};
 
-export interface Customer {
+export type Customer = {
   firstName: string;
   lastName: string;
   salutation: string;
@@ -142,9 +144,9 @@ export interface Customer {
   telNumber: string;
   email?: string;
   emailCopy?: string;
-}
+};
 
-export interface Furniture {
+export type Furniture = {
   categoryRefs: Category[];
   selectedCategory?: string;
   name: string;
@@ -162,7 +164,7 @@ export interface Furniture {
   montagePrice: string;
   sortOrder: number;
   step?: number;
-}
+};
 
 export type OrderService = AppPacking | AppService;
 
@@ -204,19 +206,19 @@ export type AppService = {
 
 export type Service = AppPacking | AppService | AppPrice;
 
-export interface Category {
+export type Category = {
   id: string;
   name: string;
   slug: string;
   sort: number;
-}
+};
 
-export interface ItemBlock {
+export type ItemBlock = {
   category: string;
   furniture: Furniture[];
-}
+};
 
-export interface JFAnswer {
+export type JFAnswer = {
   /**
    * field name
    */
@@ -228,17 +230,17 @@ export interface JFAnswer {
   text: string;
   answer: any;
   prettyFormat?: string;
-}
+};
 
-export interface DueDate {
+export type DueDate = {
   date: string;
   index: number;
   costs?: number;
   sum: number;
   text: string;
-}
+};
 
-export interface Rechnung {
+export type Rechnung = {
   date: string;
   firma: string;
   customerName: string;
@@ -248,11 +250,11 @@ export interface Rechnung {
   entries: MLeistung[];
   text: string;
   dueDates: DueDate[];
-}
+};
 
-export interface Gutschrift {
+export type Gutschrift = {
   date: string;
   gNumber: string;
   entries: MLeistung[];
   text: string;
-}
+};
