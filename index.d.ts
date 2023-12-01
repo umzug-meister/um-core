@@ -70,6 +70,7 @@ export type BucketObject = {
    * Key to which the object was uploaded.
    */
   Key: string;
+  ETag: string;
 };
 
 export type CustomItem = {
