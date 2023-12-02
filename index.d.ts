@@ -7,7 +7,6 @@ export type Order = {
   myhammer?: boolean;
   id: string | undefined;
   rid?: string;
-  status: string;
   customer: Customer;
   date: string;
   date_from: string;
@@ -40,6 +39,9 @@ export type Order = {
   bulkyItems: CustomItem[];
   heavy: boolean;
   heavyItems: CustomItem[];
+  /**
+   * @deprecated
+   */
   images: string[];
   bucketImages: BucketObject[];
   prices: Prices;
@@ -105,12 +107,6 @@ export type Prices = {
   services?: number;
   verpackung?: number;
   other?: number;
-};
-
-export type MovementDates = {
-  date: string;
-  date_from: string;
-  date_to: string;
 };
 
 export type Address = {
