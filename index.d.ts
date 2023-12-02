@@ -29,7 +29,11 @@ export type Order = {
   text: string;
   disposalFlag: boolean;
   disposalText: string;
+  /**
+   * @deprecated
+   */
   creationTime: string;
+  timestamp: number;
   lupd: number;
   time: string;
   expensive: boolean;
