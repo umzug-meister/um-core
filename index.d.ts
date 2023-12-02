@@ -2,11 +2,14 @@ export type OrderSrcType = "express" | "individuelle" | "UmzugRuckZuck";
 
 export type Order = {
   dataPrivacyAccepted: boolean;
-  src?: OrderSrcType;
-  check24?: boolean;
-  myhammer?: boolean;
-  id: string | undefined;
-  rid?: string;
+  src: OrderSrcType;
+  check24: boolean;
+  myhammer: boolean;
+  id?: string;
+  /**
+   * @deprecated
+   */
+  rid: string;
   customer: Customer;
   date: string;
   date_from: string;
@@ -45,11 +48,11 @@ export type Order = {
   images: string[];
   bucketImages: BucketObject[];
   prices: Prices;
-  discount: string | number;
-  discountValue: string | number;
-  rideCosts: string | number;
-  volume: string | number;
-  sum: string | number;
+  discount: number;
+  discountValue: number;
+  rideCosts: number;
+  volume: number;
+  sum: number;
   timeBased: TimeBasedPrice;
   ownItems: string;
   rechnung?: Rechnung;
@@ -121,9 +124,9 @@ export type Address = {
   movementObject?: string;
   hasLoft: boolean;
   packservice: boolean;
-  demontage?: boolean;
-  montage?: boolean;
-  stockwerke?: string[];
+  demontage: boolean;
+  montage: boolean;
+  stockwerke: string[];
   roomsToRelocate: number;
   hasBasement: boolean;
   hasGarage: boolean;
@@ -148,7 +151,7 @@ export type Furniture = {
   selectedCategory?: string;
   name: string;
   id: string;
-  colli: string | number;
+  colli: number;
   volume: number;
   weight?: string;
   demontage?: boolean;
@@ -215,6 +218,9 @@ export type ItemBlock = {
   furniture: Furniture[];
 };
 
+/**
+ * @deprecated
+ */
 export type JFAnswer = {
   /**
    * field name
