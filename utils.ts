@@ -1,7 +1,6 @@
-export const clearCountry = (str: string) => {
-  // prettier-ignore
+export function clearCountry(str: string) {
   return str
-      .replace(', Deutschland', '')
-      .replace(', Германия', '')
-      .replace(', Germany', '');
-};
+    .replace(", Deutschland", "")
+    .replace(", Германия", "")
+    .replace(", Germany", "");
+}
