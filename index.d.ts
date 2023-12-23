@@ -126,7 +126,6 @@ export type Address = {
   runningDistance: string;
   address: string;
   address_street: string;
-  address_number: string;
   address_city: string;
   address_zip: string;
   movementObject?: string;
