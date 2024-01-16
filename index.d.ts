@@ -1,4 +1,8 @@
-export type OrderSrcType = "express" | "individuelle" | "UmzugRuckZuck";
+export type OrderSrcType =
+  | "express"
+  | "individuelle"
+  | "UmzugRuckZuck"
+  | "Moebelliste";
 
 export type Order = {
   dataPrivacyAccepted: boolean;
@@ -260,6 +264,7 @@ export type Rechnung = {
   entries: MLeistung[];
   text: string;
   dueDates: DueDate[];
+  orderId: string;
 };
 
 export type Gutschrift = {
