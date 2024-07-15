@@ -145,6 +145,7 @@ export type Address = {
   wardrobeWidth: number;
   bedNumber: number;
   bulky: boolean;
+  needsPaintingWork: boolean;
 };
 
 export type Customer = {
