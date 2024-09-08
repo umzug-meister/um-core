@@ -5,6 +5,7 @@ export type OrderSrcType =
   | "Moebelliste"
   | "obi"
   | "check24"
+  | "moebeltransport24"
   | "myhammer";
 
 export type Order = {
