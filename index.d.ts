@@ -10,13 +10,7 @@ export type OrderSrcType =
 export type Order = {
   dataPrivacyAccepted: boolean;
   src: OrderSrcType;
-  check24: boolean;
-  myhammer: boolean;
   id?: string;
-  /**
-   * @deprecated
-   */
-  rid: string;
   customer: Customer;
   date: string;
   date_from: string;
