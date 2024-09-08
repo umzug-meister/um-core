@@ -3,7 +3,9 @@ export type OrderSrcType =
   | "individuelle"
   | "UmzugRuckZuck"
   | "Moebelliste"
-  | "OBI";
+  | "obi"
+  | "check24"
+  | "myhammer";
 
 export type Order = {
   dataPrivacyAccepted: boolean;
