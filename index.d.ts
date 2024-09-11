@@ -188,6 +188,9 @@ export type AppPrice = {
   tag: "Price";
   hourPrice: number;
   t35?: number;
+  /**
+   * @deprecated
+   */
   t75?: number;
   workers: number;
   includedHours: number;
