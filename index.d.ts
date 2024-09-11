@@ -25,6 +25,9 @@ export type Order = {
   items: Furniture[];
   workersNumber: number;
   transporterNumber: number;
+  /**
+   * @deprecated
+   */
   t75: number;
   boxNumber: number;
   kleiderboxNumber: number;
