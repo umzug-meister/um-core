@@ -11,7 +11,7 @@ export type OrderSrcType =
 export type Order = {
   dataPrivacyAccepted: boolean;
   src: OrderSrcType;
-  id?: string;
+  id?: number;
   customer: Customer;
   date: string;
   date_from: string;
@@ -69,6 +69,8 @@ export type Order = {
   costsAssumption: boolean;
   needPackings: boolean;
   bohrarbeiten: boolean;
+  isCopyOf?: number;
+  isCounted: boolean;
 };
 
 export type BucketObject = {
@@ -146,7 +148,6 @@ export type Address = {
   wardrobeWidth: number;
   bedNumber: number;
   bulky: boolean;
-  needsPaintingWork: boolean;
 };
 
 export type Customer = {
