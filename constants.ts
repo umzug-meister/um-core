@@ -22,7 +22,7 @@ export const liftTypes = [
   "8+ Personen",
 ];
 
-export const options: OrderSrcType[] = [
+export const orderSrcTypes: OrderSrcType[] = [
   "express",
   "individuelle",
   "obi",
