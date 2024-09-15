@@ -225,9 +225,12 @@ export type AppService = {
   show: true;
 };
 
+export type AppCounterType = "Lead" | "Offer";
+
 export type AppCounter = {
   tag: "Counter";
   id: number;
+  type: AppCounterType;
   data: any;
 };
 
