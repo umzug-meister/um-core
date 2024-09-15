@@ -1,3 +1,5 @@
+import { OrderSrcType } from ".";
+
 export const movementObjects = ["Wohnung", "Haus", "Keller", "Lager", "Büro"];
 
 export const parkingDistances = [...new Array(10).keys()].map(
@@ -18,4 +20,15 @@ export const liftTypes = [
   "4 Personen",
   "6 Personen",
   "8+ Personen",
+];
+
+export const options: OrderSrcType[] = [
+  "express",
+  "individuelle",
+  "obi",
+  "check24",
+  "myhammer",
+  "Moebelliste",
+  "UmzugRuckZuck",
+  "moebeltransport24",
 ];
