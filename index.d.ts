@@ -182,10 +182,14 @@ export type Furniture = {
 
 export type OrderService = AppPacking | AppService;
 
-export type AppServiceTag = "Bohrarbeiten" | "Price" | "Packmaterial";
+export type AppServiceTag =
+  | "Bohrarbeiten"
+  | "Price"
+  | "Packmaterial"
+  | "Counter";
 
 export type AppPrice = {
-  id: string;
+  id: number;
   tag: "Price";
   hourPrice: number;
   t35?: number;
@@ -202,7 +206,7 @@ export type AppPrice = {
 
 export type AppPacking = {
   tag: "Packmaterial";
-  id: string;
+  id: number;
   name: string;
   price: string;
   colli: string;
@@ -214,14 +218,20 @@ export type AppPacking = {
 
 export type AppService = {
   tag: "Bohrarbeiten";
-  id: string;
+  id: number;
   name: string;
   price: string;
   colli: string;
   show: true;
 };
 
-export type Service = AppPacking | AppService | AppPrice;
+export type AppCounter = {
+  tag: "Counter";
+  id: number;
+  data: any;
+};
+
+export type Service = AppPacking | AppService | AppPrice | AppCounter;
 
 export type Category = {
   id: string;
