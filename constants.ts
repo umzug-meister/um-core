@@ -25,10 +25,10 @@ export const liftTypes = [
 export const orderSrcTypes: OrderSrcType[] = [
   "express",
   "individuelle",
-  "obi",
-  "check24",
-  "myhammer",
   "Moebelliste",
   "UmzugRuckZuck",
+  "check24",
   "moebeltransport24",
+  "obi",
+  "myhammer",
 ];
