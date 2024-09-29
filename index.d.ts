@@ -1,3 +1,8 @@
+type WpEntity = {
+  id: number;
+  name: string;
+};
+
 export type OrderSrcType =
   | "express"
   | "individuelle"
@@ -7,71 +12,6 @@ export type OrderSrcType =
   | "check24"
   | "moebeltransport24"
   | "myhammer";
-
-export type Order = {
-  dataPrivacyAccepted: boolean;
-  src: OrderSrcType;
-  id?: number;
-  customer: Customer;
-  date: string;
-  date_from: string;
-  date_to: string;
-  isDateFix: boolean;
-  from: Address;
-  to: Address;
-  distance: number;
-  leistungen: MLeistung[];
-  services: OrderService[];
-  items: Furniture[];
-  workersNumber: number;
-  transporterNumber: number;
-  /**
-   * @deprecated
-   */
-  t75: number;
-  boxNumber: number;
-  kleiderboxNumber: number;
-  text: string;
-  disposalFlag: boolean;
-  disposalText: string;
-  /**
-   * @deprecated
-   */
-  creationTime: string;
-  timestamp: number;
-  lupd: number;
-  time: string;
-  expensive: boolean;
-  /**
-   * @deprecated
-   */
-  expensiveText: string;
-  expensiveItems: CustomItem[];
-  bulky: boolean;
-  bulkyItems: CustomItem[];
-  heavy: boolean;
-  heavyItems: CustomItem[];
-  /**
-   * @deprecated
-   */
-  images: string[];
-  bucketImages: BucketObject[];
-  prices: Prices;
-  discount: number;
-  discountValue: number;
-  rideCosts: number;
-  volume: number;
-  sum: number;
-  timeBased: TimeBasedPrice;
-  ownItems: string;
-  rechnung?: Rechnung;
-  gutschrift?: Gutschrift;
-  costsAssumption: boolean;
-  needPackings: boolean;
-  bohrarbeiten: boolean;
-  isCopyOf?: number;
-  isCounted: boolean;
-};
 
 export type BucketObject = {
   /**
@@ -160,11 +100,74 @@ export type Customer = {
   emailCopy?: string;
 };
 
+export type Order = {
+  dataPrivacyAccepted: boolean;
+  src: OrderSrcType;
+  id?: number;
+  customer: Customer;
+  date: string;
+  date_from: string;
+  date_to: string;
+  isDateFix: boolean;
+  from: Address;
+  to: Address;
+  distance: number;
+  leistungen: MLeistung[];
+  services: OrderService[];
+  items: Furniture[];
+  workersNumber: number;
+  transporterNumber: number;
+  /**
+   * @deprecated
+   */
+  t75: number;
+  boxNumber: number;
+  kleiderboxNumber: number;
+  text: string;
+  disposalFlag: boolean;
+  disposalText: string;
+  /**
+   * @deprecated
+   */
+  creationTime: string;
+  timestamp: number;
+  lupd: number;
+  time: string;
+  expensive: boolean;
+  /**
+   * @deprecated
+   */
+  expensiveText: string;
+  expensiveItems: CustomItem[];
+  bulky: boolean;
+  bulkyItems: CustomItem[];
+  heavy: boolean;
+  heavyItems: CustomItem[];
+  /**
+   * @deprecated
+   */
+  images: string[];
+  bucketImages: BucketObject[];
+  prices: Prices;
+  discount: number;
+  discountValue: number;
+  rideCosts: number;
+  volume: number;
+  sum: number;
+  timeBased: TimeBasedPrice;
+  ownItems: string;
+  rechnung?: Rechnung;
+  gutschrift?: Gutschrift;
+  costsAssumption: boolean;
+  needPackings: boolean;
+  bohrarbeiten: boolean;
+  isCopyOf?: number;
+  isCounted: boolean;
+} & WpEntity;
+
 export type Furniture = {
   categoryRefs: Category[];
   selectedCategory?: string;
-  name: string;
-  id: string;
   colli: number;
   volume: number;
   weight?: string;
@@ -178,7 +181,7 @@ export type Furniture = {
   montagePrice: string;
   sortOrder: number;
   step?: number;
-};
+} & WpEntity;
 
 export type OrderService = AppPacking | AppService;
 
@@ -189,7 +192,6 @@ export type AppServiceTag =
   | "Counter";
 
 export type AppPrice = {
-  id: number;
   tag: "Price";
   hourPrice: number;
   t35?: number;
@@ -202,7 +204,7 @@ export type AppPrice = {
   sum: number;
   ridingCosts: number;
   sort: number;
-};
+} & WpEntity;
 
 export type AppPacking = {
   tag: "Packmaterial";
@@ -214,55 +216,33 @@ export type AppPacking = {
   media: string;
   show: true;
   sort: number;
-};
+} & WpEntity;
 
 export type AppService = {
   tag: "Bohrarbeiten";
-  id: number;
-  name: string;
   price: string;
   colli: string;
   show: true;
-};
+} & WpEntity;
 
 export type AppCounterType = "Lead" | "Offer";
 
 export type AppCounter = {
   tag: "Counter";
-  id: number;
   type: AppCounterType;
   data: any;
-};
+} & WpEntity;
 
 export type Service = AppPacking | AppService | AppPrice | AppCounter;
 
 export type Category = {
-  id: string;
-  name: string;
   slug: string;
   sort: number;
-};
+} & WpEntity;
 
 export type ItemBlock = {
   category: string;
   furniture: Furniture[];
-};
-
-/**
- * @deprecated
- */
-export type JFAnswer = {
-  /**
-   * field name
-   */
-  name: string;
-  order: number;
-  /**
-   * field question
-   */
-  text: string;
-  answer: any;
-  prettyFormat?: string;
 };
 
 export type DueDate = {
