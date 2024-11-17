@@ -44,7 +44,10 @@ export type MLeistung = {
   price?: string;
   sum: string | number;
   colli?: number;
-  calculate: boolean;
+  /**
+   * @deprecated
+   */
+  calculate?: boolean;
   hidden?: boolean;
   red?: boolean;
   disabled?: boolean;
