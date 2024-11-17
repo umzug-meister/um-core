@@ -156,6 +156,9 @@ export type Order = {
   discountValue: number;
   rideCosts: number;
   volume: number;
+  /**
+   * @deprecated
+   */
   sum: number;
   timeBased: TimeBasedPrice;
   ownItems: string;
