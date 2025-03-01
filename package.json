@@ -11,5 +11,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "umzug-meister",
-  "license": "MIT"
+  "license": "MIT",
+  "release": {
+    "branches": [
+      "main"
+    ]
+  }
 }
