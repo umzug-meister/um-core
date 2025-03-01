@@ -7,7 +7,7 @@ on:
 
 jobs:
   release:
-    name: Release UM Admin
+    name: Release UM Core
     runs-on: ubuntu-latest
     permissions:
       contents: write
