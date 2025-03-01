@@ -12,6 +12,9 @@
   },
   "author": "umzug-meister",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "release": {
     "branches": [
       "main"
