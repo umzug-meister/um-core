@@ -113,7 +113,11 @@ export type Order = {
   date_to: string;
   isDateFix: boolean;
   from: Address;
+  secondaryFrom: Address;
+  showSecondaryFrom: boolean;
   to: Address;
+  secondaryTo: Address;
+  showSecondaryTo: boolean;
   distance: number;
   leistungen: MLeistung[];
   services: OrderService[];
