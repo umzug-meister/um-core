@@ -1,6 +1,6 @@
 {
   "version": "0.0.0-dev",
-  "name": "um-core",
+  "name": "@umzug-meister/um-core",
   "description": "um-core",
   "main": "index.js",
   "repository": {

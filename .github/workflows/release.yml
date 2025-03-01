@@ -1,28 +1,28 @@
 name: Release
-
 on:
   push:
     branches:
-      - main
+      - main # or main
+
+permissions:
+  contents: read # for checkout
 
 jobs:
   release:
-    name: Release UM Core
+    name: Release
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write # to be able to publish a GitHub release
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Setup node
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
-          registry-url: "https://npm.pkg.github.com/"
-          scope: "@umzug-meister"
-
-      - name: Run Semantic Release
+          node-version: "22"
+      - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
