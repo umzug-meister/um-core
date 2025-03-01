@@ -1,7 +1,7 @@
 {
-  "name": "um-types",
+  "name": "um-core",
   "version": "1.1.27",
-  "description": "um-types",
+  "description": "um-core",
   "main": "index.js",
   "repository": {
     "type": "git",
