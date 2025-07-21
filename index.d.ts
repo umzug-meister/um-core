@@ -170,6 +170,9 @@ export type Order = {
   gutschrift?: Gutschrift;
   costsAssumption: boolean;
   needPackings: boolean;
+  /**
+   * @deprecated
+   */
   bohrarbeiten: boolean;
   isCopyOf?: number;
   isCounted: boolean;
