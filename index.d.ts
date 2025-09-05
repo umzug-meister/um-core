@@ -235,6 +235,7 @@ export type AppService = {
   tag: "Bohrarbeiten";
   price: string;
   colli: string;
+  sort: number;
   show: true;
 } & WpEntity;
 
