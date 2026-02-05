@@ -278,6 +278,7 @@ export type Rechnung = {
   text: string;
   dueDates: DueDate[];
   orderId: string;
+  tax: number;
 };
 
 export type Gutschrift = {
@@ -285,4 +286,5 @@ export type Gutschrift = {
   gNumber: string;
   entries: MLeistung[];
   text: string;
+  tax: number;
 };
