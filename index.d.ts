@@ -104,6 +104,7 @@ export type Customer = {
 };
 
 export type Order = {
+  visitWanted: boolean;
   dataPrivacyAccepted: boolean;
   src: OrderSrcType;
   id?: number;
