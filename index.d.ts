@@ -11,7 +11,8 @@ export type OrderSrcType =
   | "obi"
   | "check24"
   | "moebeltransport24"
-  | "myhammer";
+  | "myhammer"
+  | string;
 
 export type BucketObject = {
   /**
