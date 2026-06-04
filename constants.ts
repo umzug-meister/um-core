@@ -27,8 +27,6 @@ export const orderSrcTypes: OrderSrcType[] = [
   "individuelle",
   "Moebelliste",
   "UmzugRuckZuck",
+  "UmzugRuckZuck24",
   "check24",
-  "moebeltransport24",
-  "obi",
-  "myhammer",
 ];
